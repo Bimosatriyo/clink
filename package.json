@@ -26,6 +26,7 @@
     "coreui_library_short_version": "4.0"
   },
   "dependencies": {
+    "@ant-design/react-native": "^4.2.0",
     "@coreui/chartjs": "^3.0.0",
     "@coreui/coreui": "^4.0.5",
     "@coreui/icons": "^2.1.0",

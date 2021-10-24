@@ -15,13 +15,14 @@ import {
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
 import { cilLockLocked, cilUser } from '@coreui/icons'
+// import logos from 'src/assets/images/logo.png'
 
 const Login = () => {
   return (
     <div className="bg-light min-vh-100 d-flex flex-row align-items-center">
       <CContainer>
         <CRow className="justify-content-center">
-          <CCol md={8}>
+          <CCol md={30}>
             <CCardGroup>
               <CCard className="p-4">
                 <CCardBody>
