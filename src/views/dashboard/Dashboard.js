@@ -183,21 +183,21 @@ const Dashboard = () => {
   return (
     <>
       <WidgetsDropdown />
-      <CCard className="mb-4">
+      <CCard className="mb-8">
         <CCardBody>
           <CRow>
             <CCol sm={5}>
               <h4 id="traffic" className="card-title mb-0">
-                Traffic
+                CT0 Customer
               </h4>
-              <div className="small text-medium-emphasis">January - July 2021</div>
+              <div className="small text-medium-emphasis">January - October 2021</div>
             </CCol>
             <CCol sm={7} className="d-none d-md-block">
-              <CButton color="primary" className="float-end">
+              {/* <CButton color="primary" className="float-end">
                 <CIcon icon={cilCloudDownload} />
-              </CButton>
+              </CButton> */}
               <CButtonGroup className="float-end me-3">
-                {['Day', 'Month', 'Year'].map((value) => (
+                {['Month'].map((value) => (
                   <CButton
                     color="outline-secondary"
                     key={value}
@@ -213,7 +213,18 @@ const Dashboard = () => {
           <CChartLine
             style={{ height: '300px', marginTop: '40px' }}
             data={{
-              labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+              labels: [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+              ],
               datasets: [
                 {
                   label: 'My First dataset',
@@ -222,6 +233,9 @@ const Dashboard = () => {
                   pointHoverBackgroundColor: getStyle('--cui-info'),
                   borderWidth: 2,
                   data: [
+                    random(50, 200),
+                    random(50, 200),
+                    random(50, 200),
                     random(50, 200),
                     random(50, 200),
                     random(50, 200),
@@ -246,6 +260,9 @@ const Dashboard = () => {
                     random(50, 200),
                     random(50, 200),
                     random(50, 200),
+                    random(50, 200),
+                    random(50, 200),
+                    random(50, 200),
                   ],
                 },
                 {
@@ -255,7 +272,7 @@ const Dashboard = () => {
                   pointHoverBackgroundColor: getStyle('--cui-danger'),
                   borderWidth: 1,
                   borderDash: [8, 5],
-                  data: [65, 65, 65, 65, 65, 65, 65],
+                  data: [65, 65, 65, 65, 65, 65, 65, 65, 65, 65],
                 },
               ],
             }}
@@ -309,13 +326,13 @@ const Dashboard = () => {
           </CRow>
         </CCardFooter>
       </CCard>
-
-      <WidgetsBrand withCharts />
+      <br></br>
+      {/* <WidgetsBrand withCharts /> */}
 
       <CRow>
         <CCol xs>
           <CCard className="mb-4">
-            <CCardHeader>Traffic {' & '} Sales</CCardHeader>
+            <CCardHeader>Cleansed Port</CCardHeader>
             <CCardBody>
               <CRow>
                 <CCol xs={12} md={6} xl={6}>
@@ -352,13 +369,13 @@ const Dashboard = () => {
                   <CRow>
                     <CCol sm={6}>
                       <div className="border-start border-start-4 border-start-warning py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Pageviews</div>
+                        <div className="text-medium-emphasis small">Clean Port</div>
                         <div className="fs-5 fw-semibold">78,623</div>
                       </div>
                     </CCol>
                     <CCol sm={6}>
                       <div className="border-start border-start-4 border-start-success py-1 px-3 mb-3">
-                        <div className="text-medium-emphasis small">Organic</div>
+                        <div className="text-medium-emphasis small">Existing Port</div>
                         <div className="fs-5 fw-semibold">49,123</div>
                       </div>
                     </CCol>
@@ -401,7 +418,7 @@ const Dashboard = () => {
 
               <br />
 
-              <CTable align="middle" className="mb-0 border" hover responsive>
+              {/* <CTable align="middle" className="mb-0 border" hover responsive>
                 <CTableHead color="light">
                   <CTableRow>
                     <CTableHeaderCell className="text-center">
@@ -451,7 +468,7 @@ const Dashboard = () => {
                     </CTableRow>
                   ))}
                 </CTableBody>
-              </CTable>
+              </CTable> */}
             </CCardBody>
           </CCard>
         </CCol>

@@ -9,9 +9,10 @@ import {
   cilNotes,
   cilPencil,
   cilPuzzle,
-  cilSpeedometer,
   cilStar,
-  cilDollar,
+  cilViewQuilt,
+  cilViewStream,
+  cilViewColumn,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -20,17 +21,19 @@ const _nav = [
     component: CNavItem,
     name: 'Dashboard',
     to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
+    icon: <CIcon icon={cilViewQuilt} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Revenue',
+    name: 'Exiting CT0 Customer',
     to: '/dashboard',
-    icon: <CIcon icon={cilDollar} customClassName="nav-icon" />,
+    icon: <CIcon icon={cilViewStream} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Cleansing Progress',
+    to: '/dashboard',
+    icon: <CIcon icon={cilViewColumn} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,
